@@ -1,0 +1,14 @@
+[
+    {
+        "name" : "casa",
+        "subtypes" : [
+            "cibo"
+        ]
+    },
+    {
+        "name" : "salute",
+        "subtypes" : [
+            "analisi"
+        ]
+    }
+]

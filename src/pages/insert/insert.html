@@ -1,0 +1,33 @@
+<!--
+  Generated template for the InsertPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>insert</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Quando</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="when" (ionChange)="changeWhen(when)"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Tipo</ion-label>
+    <ion-select [(ngModel)]="type" (ionChange)="changeType(type)">
+      <ion-option *ngFor="let t of types" [value]="t">{{t.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Sottotipo</ion-label>
+    <ion-select [(ngModel)]="subtype" (ionChange)="changeSubtype(subtype)" [disabled]="!subtypes">
+      <ion-option *ngFor="let s of subtypes" [value]="s">{{s}}</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-content>
